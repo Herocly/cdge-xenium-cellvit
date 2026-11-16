@@ -12,10 +12,11 @@ support remain `Unknown`.
 
 ## Start here
 
-You need a Linux server, `uv`, Python 3.10 and 3.11, HEST Xenium files, and a
-CUDA-capable GPU for CellViT training. Store HEST files and model weights
-outside the repository. If your server requires a particular official PyTorch
-CUDA wheel, set `CDGE_TORCH_INDEX_URL` before installation.
+To generate molecular labels and image patches, prepare a Linux server, `uv`,
+Python 3.10 and 3.11, and your HEST Xenium files. Store HEST files outside
+the repository. The installation script also sets up CellViT; GPU and model
+settings matter when we reach training. If your server requires a particular
+official PyTorch CUDA wheel, set `CDGE_TORCH_INDEX_URL` before installation.
 
 ```bash
 git clone https://github.com/Herocly/cdge-xenium-cellvit.git cdge-xenium-cellvit
@@ -29,37 +30,47 @@ Open `configs/my_experiment.yaml` and set:
 
 - `hest_dir`: where your HEST data lives.
 - `output_root`: where results should be saved.
-- `samples`: each sample's ID, real organ, source cohort, and `train` or
-  `val` role.
-- `cellvit.pretrained_checkpoint`: a compatible full CellViT checkpoint for
-  a formal training comparison.
+- `samples`: list every HEST sample you want to process, with its `sample_id`,
+  real `organ`, and source `cohort`. Add one YAML entry per sample. The config
+  also requires `split`; use `train` while preparing labels and patches, then
+  set the agreed Train/Validation split when we configure CellViT.
 
 Paths in the example are relative to the YAML file; absolute paths also work.
 The `organ` setting selects marker database records and Cell Ontology context
 for molecular annotation. CellViT reads its tissue name from HEST metadata.
 
-Put all samples in one YAML. Keep each source cohort entirely in Train or
-Validation. Use cohort names from the source metadata or CSV.
+## What we are running now
 
-Check the inputs before a long run:
+The current workflow has three steps: **preflight → molecular → convert**.
+Each step works through the samples listed in your YAML. Use that same YAML
+for all three commands:
 
 ```bash
 envs/cellvit/.venv/bin/python run_pipeline.py \
   --config configs/my_experiment.yaml --stage preflight
-```
 
-The report shows paths, cell ID overlap, image metadata, environments, GPU
-status, and split issues. You can begin with one sample for label generation
-and patch checks; training requires an independent Validation cohort.
-
-## Run the pipeline
-
-Use this command and change the stage name as you progress:
-
-```bash
 envs/cellvit/.venv/bin/python run_pipeline.py \
   --config configs/my_experiment.yaml --stage molecular
+
+envs/cellvit/.venv/bin/python run_pipeline.py \
+  --config configs/my_experiment.yaml --stage convert
 ```
+
+1. `preflight` checks the HEST files, cell IDs, and image information. Read
+   the report before starting the long run.
+2. `molecular` generates cell labels. Find them in
+   `molecular/<ID>/labels.csv`.
+3. `convert` matches those labels to nuclei and H&E patches. Find the PNG/NPY
+   pairs and the matching report in `patches/`.
+
+After these three steps, review the labels and patches for each sample. We
+will configure CellViT together later: the Train/Validation cohort split,
+model checkpoint, training settings, and test data.
+
+## Stage reference
+
+The first three stages are the current workflow. The remaining stages prepare
+and run the later CellViT work:
 
 | Stage | What it does | Main output |
 | --- | --- | --- |
@@ -79,26 +90,16 @@ creates a separate run. Completed labels and patches are reused within the
 same run. `convert`, `check`, and `assemble` call earlier data stages as
 needed; `smoke`, `train`, and `evaluate` run when requested.
 
-### One sample first
+### CellViT training later
 
-With one HEST sample, run these commands in order:
+When we set up CellViT, keep each source cohort entirely in Train or
+Validation. Add the agreed split and model settings before running `assemble`,
+`smoke`, `train`, or `evaluate`. The `all` stage also uses a prepared
+PanNuke-format test set.
 
-```bash
-envs/cellvit/.venv/bin/python run_pipeline.py --config configs/my_experiment.yaml --stage molecular
-envs/cellvit/.venv/bin/python run_pipeline.py --config configs/my_experiment.yaml --stage convert
-envs/cellvit/.venv/bin/python run_pipeline.py --config configs/my_experiment.yaml --stage check
-```
-
-Look at `molecular/<ID>/labels.csv` and the patch audit. To train, add
-samples from an independent Validation cohort, then run `assemble`,
-`smoke`, and `train`. Set `cellvit.external_test_dataset` to a prepared
-PanNuke-format dataset for `evaluate`. The `all` stage expects both
-independent cohorts and the external test set.
-
-Adding samples changes the run fingerprint. To reuse an earlier sample's
-labels, set its `labels_csv` to the completed CSV in the new YAML. Keep that
-as its single molecular source by removing any explicit `source_proc_adata`
-or `input_adata` entry. Keep the CSV available at that path.
+Changing the YAML, including its `split` values, creates a new run directory.
+To reuse molecular labels you already generated, set `labels_csv` for each
+sample to its completed CSV. Keep the CSV available at that path.
 
 ### Watching a long molecular run
 
