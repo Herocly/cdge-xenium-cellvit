@@ -1,0 +1,813 @@
+{
+  "note": "Original sha256 records source snapshots. packaged_sha256 records path-only packaging edits. Scientific calculations and thresholds are unchanged.",
+  "files": [
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/01_prepare_label_free_analysis.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/01_prepare_label_free_analysis.py",
+      "sha256": "837cddbb789b5c23e1fea1f7ff600e8f2be4d2811ca3f7c9b150c49aff87afe7"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/02_build_cluster_evidence.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/02_build_cluster_evidence.py",
+      "sha256": "11a62df4e52d2a36297c32f23eeab10c548e61045830f9f88c5e68b23932c9af"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/03_select_non_tumor_seeds.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/03_select_non_tumor_seeds.py",
+      "sha256": "1948e174dcad3dea14c19266873723f82db76d8b783447a9526e2b3227b4dee7"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/04_fetch_panel_coordinates.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/04_fetch_panel_coordinates.py",
+      "sha256": "754fc779426d5798b9c67ec4d32c48cb5b5f252f8da042cebf1c4e1fdad7803a"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/05_run_insitucnv.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/05_run_insitucnv.py",
+      "sha256": "67cea0b029c43303d522834e02e59c641df2d34aca08d4fcfe88afdb370d4171",
+      "packaged_sha256": "97bec25d9818aaabf486272efcbbd39b305413dcaed10821d464a0f46e72949c"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/06_audit_cnv_candidates.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/06_audit_cnv_candidates.py",
+      "sha256": "e0f093f71777164fbb30f2ce80379c9f613eb9ea91ffdb569ecab9555b99ac0f"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/07_export_neoplastic_seeds.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/07_export_neoplastic_seeds.py",
+      "sha256": "75b2372f52efc0702dfc777edd4d657c95d45acd18cd1b5740e39380f8d7ac23"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/09_build_neoplastic_evidence_ablation.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/09_build_neoplastic_evidence_ablation.py",
+      "sha256": "6f26031be3e0c5b00393546dd60a57144ad1c26c8f509f7a6cdf76976edcde0e"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/10_combine_initial_seeds.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/10_combine_initial_seeds.py",
+      "sha256": "d0269204d7ee3f4fac52a3cde114fea9467d7856cfb7002ec574dddd6a758636"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/11_export_iterative_pseudolabels.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/11_export_iterative_pseudolabels.py",
+      "sha256": "1bafd9d6d141e20974a780dedfa6639f02d7a42ee97c994521849991ab4f9282"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/01_prepare_label_free_analysis.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/01_prepare_label_free_analysis.py",
+      "sha256": "ca429f9dced91d9566a4d17ada5e59dedab05cdf83fe29495093bfa8652222ec"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/02_build_cluster_evidence.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/02_build_cluster_evidence.py",
+      "sha256": "e62b940e80153a100c380230276da40b45e00627f8139d29e0737d40ff0e2cfa"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/03_select_non_tumor_seeds.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/03_select_non_tumor_seeds.py",
+      "sha256": "9c020d4b1a2804dedd920fb743cb052d15ae96d6e9116ad88f7896f4f00fd05a"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/04_fetch_panel_coordinates.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/04_fetch_panel_coordinates.py",
+      "sha256": "ff2287b8a55e5e7eab0656703feb7f37d7c8df40f1a5f992dd79e96707378e8f"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/05_run_insitucnv.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/05_run_insitucnv.py",
+      "sha256": "340d9f16f982cf868f0189533668eeeb122cd717e866d0ff94113a3b22bbb711",
+      "packaged_sha256": "0094c08227141f0ca5ba8d724a7552de4d37794fe321bbd935f921cefc3d3e0a"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/06_audit_cnv_candidates.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/06_audit_cnv_candidates.py",
+      "sha256": "cd2d0f68bdbaff0312dd0e50de6de4dfd126cea05e50f56137a1da91663cfed2"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/07_export_neoplastic_seeds.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/07_export_neoplastic_seeds.py",
+      "sha256": "d71d3a82333739ce43f08660d838184bc6af7154299c51c084c5f59f9e7dca14"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/09_build_neoplastic_evidence_ablation.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/09_build_neoplastic_evidence_ablation.py",
+      "sha256": "4c39301f0cfc025dfe91564041151d8509505c75c0c78a8b19835fcffd0c80f9"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/10_combine_initial_seeds.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/10_combine_initial_seeds.py",
+      "sha256": "a6f93a5f654b684d1811b66660fc4f7f7d05318b47eb8b42c423229e8fa853f9"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/11_export_iterative_pseudolabels.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/11_export_iterative_pseudolabels.py",
+      "sha256": "7ab873dcd0ddc6f3ae560b04d3ff294f7d1655f02996e31c9126a9e1a6a95f31"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/cluster_evidence_gate.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/cluster_evidence_gate.py",
+      "sha256": "7e12c8725e5858a3529192b83b141b1fa702403cfee5c96756da3796eae38558"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/common.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/common.py",
+      "sha256": "989a6dffefae14b581ddfc1c5ba227f05806e38b64f798bd417a39e4048c44be"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/data_contracts.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/data_contracts.py",
+      "sha256": "fa3045c1bc97ed8d15cc62861783e3a378893d212d35e8833ef7acd1ccd0e4ed"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/evaluate_pseudolabels.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/evaluate_pseudolabels.py",
+      "sha256": "eac51f8ed67b12eba77d7ce23f944f1f89f0a1c0b884fa772cab44b08c77ccdf"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/expression_space.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/expression_space.py",
+      "sha256": "dcf06a28648e5bd389f110766389f0686b54cfbfefa6659d0a47637a9bdb7b7f"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/iterative_expansion.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/iterative_expansion.py",
+      "sha256": "66ad2e6e7fc21b9ab0fd3dbb56e5b723e12805e659ef4c84c75f3e9f46807c80"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/marker_voting_metrics.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/marker_voting_metrics.py",
+      "sha256": "b1e64f3ff87f3082524be0081bb35e16980dbbe79e7e9c6c1e747f83e8952971"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/ontology.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/ontology.py",
+      "sha256": "6ac72b0195d7fa2ead0686f4f21d28c682ef49601ed855a62938bad49670447a"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/ontology_tree.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/ontology_tree.py",
+      "sha256": "442f21e673b059e6aa8890f1149a7fec75d0e5eff59dc01dbf4e840692d2eb90"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/seed_classifier.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/_original_backup_20261005/seed_classifier.py",
+      "sha256": "badbaef6cb788f3ba7913869ff1b340a54d0e7ebd8b7719f3d0c4300b0f5e0ab"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/evaluate_pseudolabels.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/evaluate_pseudolabels.py",
+      "sha256": "bf1cc0bdf7f37be23c0199b0ce3789c303869d2ab41879d56953f4a6017382ba"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/cluster_evidence_gate.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/cluster_evidence_gate.py",
+      "sha256": "fc907646049e0cf4ce9c12c9bcce51e8e1f92e1b205469f3259fef582dd2a3fb"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/common.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/common.py",
+      "sha256": "25efd928860e58764139f4d19fe702720a0efc64246aa85b8e9be708f46f37fa"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/data_contracts.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/data_contracts.py",
+      "sha256": "bf8e3eed9c0bd0bc10885a7fc418114efcaf830addebdc9ba4636152917f2b12"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/expression_space.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/expression_space.py",
+      "sha256": "ecdd08e3bd4e76ca77cee3fc0409275b02ecd688b19218bd2f37d785c47ee530"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/iterative_expansion.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/iterative_expansion.py",
+      "sha256": "06a2fdc4167aba1502dc6c07ebf21dc67f66f3528bdc74ff3cd422c7c8efb7e6"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/marker_voting_metrics.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/marker_voting_metrics.py",
+      "sha256": "50acf94cb75f3e8735914a5639c453e57aea4d5b3c0faeee8ab29ebd2927560e"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/ontology.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/ontology.py",
+      "sha256": "1ae02d5595517a24cc8a32036821ae21fd5a796da09603ca8911b64b61e81aca"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/ontology_tree.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/ontology_tree.py",
+      "sha256": "ab23c8023112390eb04e478f33468bfa5427f6b8f497854b9fd4b0b39c40d4eb"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/seed_classifier.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/seed_classifier.py",
+      "sha256": "512864e93d6b6567aec6bab819667798775b60b190efb5cecc81bd31826d85c6"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/cell_ontology/cl.obo",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/cell_ontology/cl.obo",
+      "sha256": "f02b4e2a863758e697c0dc37c4748699b56d3e5a3f9753f188128555499d7121"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/cell_ontology/cl.source.obo",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/cell_ontology/cl.source.obo",
+      "sha256": "7e19b4aef8e7fe7720b0c4474c6a5b8713c904ea9ab7b7d5d96f2cb28b8fc51f"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/cell_ontology/four_class_policy.json",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/cell_ontology/four_class_policy.json",
+      "sha256": "c3cad6da961d2a73a2869117bfd8063a939fcb81cad2064a81bc9aa283d4e4fd"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/cell_ontology/snapshot.json",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/cell_ontology/snapshot.json",
+      "sha256": "59f6729ff8d90f538925b817e22b16bb7f49c6e8cfba0277e896fe1a9e2ae770"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/core_ontology_v1.csv",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/core_ontology_v1.csv",
+      "sha256": "f8e398e3774040415b1485b0fd0a21423534668a93a7b7ea1e344684a96130a1"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/ensembl_hg38_coordinates.tsv",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/ensembl_hg38_coordinates.tsv",
+      "sha256": "e9965fda09f3c5bfc5274ee720bec46cefc9979e72f9a4b61bf9d2a114dce1a7"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/marker_databases/cell_marker_mapping.csv",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/marker_databases/cell_marker_mapping.csv",
+      "sha256": "5c09e257ed97febe7defdf66a50000cb2b374da9c7cde203bd2a211ff81a74e9"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/marker_databases/cell_type_mapping.csv",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/marker_databases/cell_type_mapping.csv",
+      "sha256": "166c11c2590b798070e1d7e809846c987a0120d97379dd68aa119510c2b37b2f"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/marker_databases/database_gene_functions/Cell_marker_All.csv",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/marker_databases/database_gene_functions/Cell_marker_All.csv",
+      "sha256": "8529a51dc16dc971c73d1e932e64e7e23484222166b9c5cc836b3ce7af9d38fc"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/marker_databases/marker_gene_list.tsv",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/marker_databases/marker_gene_list.tsv",
+      "sha256": "a8246bd9036dd0aa169b0d0ab45b0b9129890232f0e50055c38abee6c735e0b9"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/marker_databases/neoplastic_genes.csv",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/marker_databases/neoplastic_genes.csv",
+      "sha256": "9a9baa06be791b4aa8f1f378325b7280362af473ae219119a8c699cdf6a410c8"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/vendor/cdge/preprocessing_hest/preproce_utils/bottom_up_utils.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/vendor/cdge/preprocessing_hest/preproce_utils/bottom_up_utils.py",
+      "sha256": "c84a9aa640695d5202f6b1d475a78c17e4e928ac22a31b829ec6ac756337c9d1"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/vendor/emanuele/README.md",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/vendor/emanuele/README.md",
+      "sha256": "2dd2a815df0e77fde248db441a8b26081409af52f190552d50c510a4ef4f2da9"
+    },
+    {
+      "packaged": "base/methods/b1_9_coordinate_contract_support50_candidate_20261003/vendor/emanuele/mapping_original.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b1_9_coordinate_contract_support50_candidate_20261003/vendor/emanuele/mapping_original.py",
+      "sha256": "ac1057dab1dd6d4fc27232302f57d4833b44699daa46d1d6a1df96dfaa1d834f"
+    },
+    {
+      "packaged": "base/methods/b2_14_teacher_constraint_ablation_candidate_20261011/normal_reference.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_14_teacher_constraint_ablation_candidate_20261011/normal_reference.py",
+      "sha256": "8e1976c8ff1f06b1c717c3f18eaaa25cfe20a94e7050e1b102bc3a4e5cdfd2a9"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/01_prepare_label_free_analysis.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/01_prepare_label_free_analysis.py",
+      "sha256": "837cddbb789b5c23e1fea1f7ff600e8f2be4d2811ca3f7c9b150c49aff87afe7"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/02_build_cluster_evidence.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/02_build_cluster_evidence.py",
+      "sha256": "11a62df4e52d2a36297c32f23eeab10c548e61045830f9f88c5e68b23932c9af"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/03_select_non_tumor_seeds.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/03_select_non_tumor_seeds.py",
+      "sha256": "1948e174dcad3dea14c19266873723f82db76d8b783447a9526e2b3227b4dee7"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/04_fetch_panel_coordinates.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/04_fetch_panel_coordinates.py",
+      "sha256": "754fc779426d5798b9c67ec4d32c48cb5b5f252f8da042cebf1c4e1fdad7803a"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/05_run_insitucnv.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/05_run_insitucnv.py",
+      "sha256": "dcb6c515a34ff4b2ef4482bd5d5c099ce71ab5820f78f11304c7ff12f33fe33c",
+      "packaged_sha256": "8b617ff9441e62b02d35feae52bf54268cd7f92a6c32bf5c80b0cbee98b68580"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/06_audit_cnv_candidates.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/06_audit_cnv_candidates.py",
+      "sha256": "e0f093f71777164fbb30f2ce80379c9f613eb9ea91ffdb569ecab9555b99ac0f"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/07_export_neoplastic_seeds.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/07_export_neoplastic_seeds.py",
+      "sha256": "75b2372f52efc0702dfc777edd4d657c95d45acd18cd1b5740e39380f8d7ac23"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/09_build_neoplastic_evidence_ablation.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/09_build_neoplastic_evidence_ablation.py",
+      "sha256": "6f26031be3e0c5b00393546dd60a57144ad1c26c8f509f7a6cdf76976edcde0e"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/10_combine_initial_seeds.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/10_combine_initial_seeds.py",
+      "sha256": "d0269204d7ee3f4fac52a3cde114fea9467d7856cfb7002ec574dddd6a758636"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/11_export_iterative_pseudolabels.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/11_export_iterative_pseudolabels.py",
+      "sha256": "1bafd9d6d141e20974a780dedfa6639f02d7a42ee97c994521849991ab4f9282"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/01_prepare_label_free_analysis.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/01_prepare_label_free_analysis.py",
+      "sha256": "ca429f9dced91d9566a4d17ada5e59dedab05cdf83fe29495093bfa8652222ec"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/02_build_cluster_evidence.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/02_build_cluster_evidence.py",
+      "sha256": "e62b940e80153a100c380230276da40b45e00627f8139d29e0737d40ff0e2cfa"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/03_select_non_tumor_seeds.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/03_select_non_tumor_seeds.py",
+      "sha256": "9c020d4b1a2804dedd920fb743cb052d15ae96d6e9116ad88f7896f4f00fd05a"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/04_fetch_panel_coordinates.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/04_fetch_panel_coordinates.py",
+      "sha256": "ff2287b8a55e5e7eab0656703feb7f37d7c8df40f1a5f992dd79e96707378e8f"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/05_run_insitucnv.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/05_run_insitucnv.py",
+      "sha256": "340d9f16f982cf868f0189533668eeeb122cd717e866d0ff94113a3b22bbb711",
+      "packaged_sha256": "0094c08227141f0ca5ba8d724a7552de4d37794fe321bbd935f921cefc3d3e0a"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/06_audit_cnv_candidates.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/06_audit_cnv_candidates.py",
+      "sha256": "cd2d0f68bdbaff0312dd0e50de6de4dfd126cea05e50f56137a1da91663cfed2"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/07_export_neoplastic_seeds.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/07_export_neoplastic_seeds.py",
+      "sha256": "d71d3a82333739ce43f08660d838184bc6af7154299c51c084c5f59f9e7dca14"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/09_build_neoplastic_evidence_ablation.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/09_build_neoplastic_evidence_ablation.py",
+      "sha256": "4c39301f0cfc025dfe91564041151d8509505c75c0c78a8b19835fcffd0c80f9"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/10_combine_initial_seeds.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/10_combine_initial_seeds.py",
+      "sha256": "a6f93a5f654b684d1811b66660fc4f7f7d05318b47eb8b42c423229e8fa853f9"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/11_export_iterative_pseudolabels.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/11_export_iterative_pseudolabels.py",
+      "sha256": "7ab873dcd0ddc6f3ae560b04d3ff294f7d1655f02996e31c9126a9e1a6a95f31"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/cluster_evidence_gate.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/cluster_evidence_gate.py",
+      "sha256": "7e12c8725e5858a3529192b83b141b1fa702403cfee5c96756da3796eae38558"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/common.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/common.py",
+      "sha256": "989a6dffefae14b581ddfc1c5ba227f05806e38b64f798bd417a39e4048c44be"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/data_contracts.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/data_contracts.py",
+      "sha256": "fa3045c1bc97ed8d15cc62861783e3a378893d212d35e8833ef7acd1ccd0e4ed"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/evaluate_pseudolabels.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/evaluate_pseudolabels.py",
+      "sha256": "eac51f8ed67b12eba77d7ce23f944f1f89f0a1c0b884fa772cab44b08c77ccdf"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/expression_space.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/expression_space.py",
+      "sha256": "dcf06a28648e5bd389f110766389f0686b54cfbfefa6659d0a47637a9bdb7b7f"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/iterative_expansion.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/iterative_expansion.py",
+      "sha256": "66ad2e6e7fc21b9ab0fd3dbb56e5b723e12805e659ef4c84c75f3e9f46807c80"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/marker_voting_metrics.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/marker_voting_metrics.py",
+      "sha256": "b1e64f3ff87f3082524be0081bb35e16980dbbe79e7e9c6c1e747f83e8952971"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/ontology.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/ontology.py",
+      "sha256": "6ac72b0195d7fa2ead0686f4f21d28c682ef49601ed855a62938bad49670447a"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/ontology_tree.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/ontology_tree.py",
+      "sha256": "442f21e673b059e6aa8890f1149a7fec75d0e5eff59dc01dbf4e840692d2eb90"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/seed_classifier.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/_original_backup_20261005/seed_classifier.py",
+      "sha256": "badbaef6cb788f3ba7913869ff1b340a54d0e7ebd8b7719f3d0c4300b0f5e0ab"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/evaluate_pseudolabels.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/evaluate_pseudolabels.py",
+      "sha256": "bf1cc0bdf7f37be23c0199b0ce3789c303869d2ab41879d56953f4a6017382ba"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/reliability/cluster_evidence_gate.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/reliability/cluster_evidence_gate.py",
+      "sha256": "fc907646049e0cf4ce9c12c9bcce51e8e1f92e1b205469f3259fef582dd2a3fb"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/reliability/common.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/reliability/common.py",
+      "sha256": "25efd928860e58764139f4d19fe702720a0efc64246aa85b8e9be708f46f37fa"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/reliability/data_contracts.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/reliability/data_contracts.py",
+      "sha256": "bf8e3eed9c0bd0bc10885a7fc418114efcaf830addebdc9ba4636152917f2b12"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/reliability/expression_space.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/reliability/expression_space.py",
+      "sha256": "ecdd08e3bd4e76ca77cee3fc0409275b02ecd688b19218bd2f37d785c47ee530"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/reliability/iterative_expansion.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/reliability/iterative_expansion.py",
+      "sha256": "06a2fdc4167aba1502dc6c07ebf21dc67f66f3528bdc74ff3cd422c7c8efb7e6"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/reliability/marker_voting_metrics.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/reliability/marker_voting_metrics.py",
+      "sha256": "50acf94cb75f3e8735914a5639c453e57aea4d5b3c0faeee8ab29ebd2927560e"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/reliability/ontology.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/reliability/ontology.py",
+      "sha256": "1ae02d5595517a24cc8a32036821ae21fd5a796da09603ca8911b64b61e81aca"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/reliability/ontology_tree.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/reliability/ontology_tree.py",
+      "sha256": "ab23c8023112390eb04e478f33468bfa5427f6b8f497854b9fd4b0b39c40d4eb"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/reliability/seed_classifier.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/reliability/seed_classifier.py",
+      "sha256": "512864e93d6b6567aec6bab819667798775b60b190efb5cecc81bd31826d85c6"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/resources/ensembl_hg38_coordinates.tsv",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/resources/ensembl_hg38_coordinates.tsv",
+      "sha256": "e9965fda09f3c5bfc5274ee720bec46cefc9979e72f9a4b61bf9d2a114dce1a7"
+    },
+    {
+      "packaged": "base/methods/b2_15_expanded_reference_cnv_candidate_20261011/resources/marker_databases/neoplastic_genes.csv",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_15_expanded_reference_cnv_candidate_20261011/resources/marker_databases/neoplastic_genes.csv",
+      "sha256": "9a9baa06be791b4aa8f1f378325b7280362af473ae219119a8c699cdf6a410c8"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/01_prepare_label_free_analysis.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/01_prepare_label_free_analysis.py",
+      "sha256": "837cddbb789b5c23e1fea1f7ff600e8f2be4d2811ca3f7c9b150c49aff87afe7"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/02_build_cluster_evidence.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/02_build_cluster_evidence.py",
+      "sha256": "11a62df4e52d2a36297c32f23eeab10c548e61045830f9f88c5e68b23932c9af"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/03_select_non_tumor_seeds.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/03_select_non_tumor_seeds.py",
+      "sha256": "1948e174dcad3dea14c19266873723f82db76d8b783447a9526e2b3227b4dee7"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/04_fetch_panel_coordinates.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/04_fetch_panel_coordinates.py",
+      "sha256": "754fc779426d5798b9c67ec4d32c48cb5b5f252f8da042cebf1c4e1fdad7803a"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/05_run_insitucnv.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/05_run_insitucnv.py",
+      "sha256": "67cea0b029c43303d522834e02e59c641df2d34aca08d4fcfe88afdb370d4171",
+      "packaged_sha256": "97bec25d9818aaabf486272efcbbd39b305413dcaed10821d464a0f46e72949c"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/06_audit_cnv_candidates.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/06_audit_cnv_candidates.py",
+      "sha256": "e0f093f71777164fbb30f2ce80379c9f613eb9ea91ffdb569ecab9555b99ac0f"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/07_export_neoplastic_seeds.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/07_export_neoplastic_seeds.py",
+      "sha256": "75b2372f52efc0702dfc777edd4d657c95d45acd18cd1b5740e39380f8d7ac23"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/09_build_neoplastic_evidence_ablation.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/09_build_neoplastic_evidence_ablation.py",
+      "sha256": "6f26031be3e0c5b00393546dd60a57144ad1c26c8f509f7a6cdf76976edcde0e"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/10_combine_initial_seeds.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/10_combine_initial_seeds.py",
+      "sha256": "d0269204d7ee3f4fac52a3cde114fea9467d7856cfb7002ec574dddd6a758636"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/11_export_iterative_pseudolabels.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/11_export_iterative_pseudolabels.py",
+      "sha256": "7125f424546f2ca3ad23f9205180d7f96adda3ebaf58841bb532f5bf840b30fc"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/01_prepare_label_free_analysis.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/01_prepare_label_free_analysis.py",
+      "sha256": "ca429f9dced91d9566a4d17ada5e59dedab05cdf83fe29495093bfa8652222ec"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/02_build_cluster_evidence.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/02_build_cluster_evidence.py",
+      "sha256": "e62b940e80153a100c380230276da40b45e00627f8139d29e0737d40ff0e2cfa"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/03_select_non_tumor_seeds.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/03_select_non_tumor_seeds.py",
+      "sha256": "9c020d4b1a2804dedd920fb743cb052d15ae96d6e9116ad88f7896f4f00fd05a"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/04_fetch_panel_coordinates.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/04_fetch_panel_coordinates.py",
+      "sha256": "ff2287b8a55e5e7eab0656703feb7f37d7c8df40f1a5f992dd79e96707378e8f"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/05_run_insitucnv.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/05_run_insitucnv.py",
+      "sha256": "340d9f16f982cf868f0189533668eeeb122cd717e866d0ff94113a3b22bbb711",
+      "packaged_sha256": "0094c08227141f0ca5ba8d724a7552de4d37794fe321bbd935f921cefc3d3e0a"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/06_audit_cnv_candidates.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/06_audit_cnv_candidates.py",
+      "sha256": "cd2d0f68bdbaff0312dd0e50de6de4dfd126cea05e50f56137a1da91663cfed2"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/07_export_neoplastic_seeds.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/07_export_neoplastic_seeds.py",
+      "sha256": "d71d3a82333739ce43f08660d838184bc6af7154299c51c084c5f59f9e7dca14"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/09_build_neoplastic_evidence_ablation.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/09_build_neoplastic_evidence_ablation.py",
+      "sha256": "4c39301f0cfc025dfe91564041151d8509505c75c0c78a8b19835fcffd0c80f9"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/10_combine_initial_seeds.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/10_combine_initial_seeds.py",
+      "sha256": "a6f93a5f654b684d1811b66660fc4f7f7d05318b47eb8b42c423229e8fa853f9"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/11_export_iterative_pseudolabels.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/11_export_iterative_pseudolabels.py",
+      "sha256": "7ab873dcd0ddc6f3ae560b04d3ff294f7d1655f02996e31c9126a9e1a6a95f31"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/cluster_evidence_gate.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/cluster_evidence_gate.py",
+      "sha256": "7e12c8725e5858a3529192b83b141b1fa702403cfee5c96756da3796eae38558"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/common.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/common.py",
+      "sha256": "989a6dffefae14b581ddfc1c5ba227f05806e38b64f798bd417a39e4048c44be"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/data_contracts.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/data_contracts.py",
+      "sha256": "fa3045c1bc97ed8d15cc62861783e3a378893d212d35e8833ef7acd1ccd0e4ed"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/evaluate_pseudolabels.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/evaluate_pseudolabels.py",
+      "sha256": "eac51f8ed67b12eba77d7ce23f944f1f89f0a1c0b884fa772cab44b08c77ccdf"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/expression_space.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/expression_space.py",
+      "sha256": "dcf06a28648e5bd389f110766389f0686b54cfbfefa6659d0a47637a9bdb7b7f"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/iterative_expansion.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/iterative_expansion.py",
+      "sha256": "66ad2e6e7fc21b9ab0fd3dbb56e5b723e12805e659ef4c84c75f3e9f46807c80"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/marker_voting_metrics.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/marker_voting_metrics.py",
+      "sha256": "b1e64f3ff87f3082524be0081bb35e16980dbbe79e7e9c6c1e747f83e8952971"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/ontology.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/ontology.py",
+      "sha256": "6ac72b0195d7fa2ead0686f4f21d28c682ef49601ed855a62938bad49670447a"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/ontology_tree.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/ontology_tree.py",
+      "sha256": "442f21e673b059e6aa8890f1149a7fec75d0e5eff59dc01dbf4e840692d2eb90"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/seed_classifier.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/_original_backup_20261005/seed_classifier.py",
+      "sha256": "badbaef6cb788f3ba7913869ff1b340a54d0e7ebd8b7719f3d0c4300b0f5e0ab"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/evaluate_pseudolabels.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/evaluate_pseudolabels.py",
+      "sha256": "bf1cc0bdf7f37be23c0199b0ce3789c303869d2ab41879d56953f4a6017382ba"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/reliability/cluster_evidence_gate.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/reliability/cluster_evidence_gate.py",
+      "sha256": "fc907646049e0cf4ce9c12c9bcce51e8e1f92e1b205469f3259fef582dd2a3fb"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/reliability/common.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/reliability/common.py",
+      "sha256": "25efd928860e58764139f4d19fe702720a0efc64246aa85b8e9be708f46f37fa"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/reliability/data_contracts.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/reliability/data_contracts.py",
+      "sha256": "bf8e3eed9c0bd0bc10885a7fc418114efcaf830addebdc9ba4636152917f2b12"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/reliability/expression_space.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/reliability/expression_space.py",
+      "sha256": "ecdd08e3bd4e76ca77cee3fc0409275b02ecd688b19218bd2f37d785c47ee530"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/reliability/iterative_expansion.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/reliability/iterative_expansion.py",
+      "sha256": "06a2fdc4167aba1502dc6c07ebf21dc67f66f3528bdc74ff3cd422c7c8efb7e6"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/reliability/marker_voting_metrics.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/reliability/marker_voting_metrics.py",
+      "sha256": "50acf94cb75f3e8735914a5639c453e57aea4d5b3c0faeee8ab29ebd2927560e"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/reliability/ontology.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/reliability/ontology.py",
+      "sha256": "1ae02d5595517a24cc8a32036821ae21fd5a796da09603ca8911b64b61e81aca"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/reliability/ontology_tree.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/reliability/ontology_tree.py",
+      "sha256": "ab23c8023112390eb04e478f33468bfa5427f6b8f497854b9fd4b0b39c40d4eb"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/reliability/seed_classifier.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/reliability/seed_classifier.py",
+      "sha256": "512864e93d6b6567aec6bab819667798775b60b190efb5cecc81bd31826d85c6"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/cell_ontology/cl.obo",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/cell_ontology/cl.obo",
+      "sha256": "f02b4e2a863758e697c0dc37c4748699b56d3e5a3f9753f188128555499d7121"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/cell_ontology/cl.source.obo",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/cell_ontology/cl.source.obo",
+      "sha256": "7e19b4aef8e7fe7720b0c4474c6a5b8713c904ea9ab7b7d5d96f2cb28b8fc51f"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/cell_ontology/four_class_policy.json",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/cell_ontology/four_class_policy.json",
+      "sha256": "c3cad6da961d2a73a2869117bfd8063a939fcb81cad2064a81bc9aa283d4e4fd"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/cell_ontology/snapshot.json",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/cell_ontology/snapshot.json",
+      "sha256": "59f6729ff8d90f538925b817e22b16bb7f49c6e8cfba0277e896fe1a9e2ae770"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/core_ontology_v1.csv",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/core_ontology_v1.csv",
+      "sha256": "f8e398e3774040415b1485b0fd0a21423534668a93a7b7ea1e344684a96130a1"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/ensembl_hg38_coordinates.tsv",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/ensembl_hg38_coordinates.tsv",
+      "sha256": "e9965fda09f3c5bfc5274ee720bec46cefc9979e72f9a4b61bf9d2a114dce1a7"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/marker_databases/cell_marker_mapping.csv",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/marker_databases/cell_marker_mapping.csv",
+      "sha256": "5c09e257ed97febe7defdf66a50000cb2b374da9c7cde203bd2a211ff81a74e9"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/marker_databases/cell_type_mapping.csv",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/marker_databases/cell_type_mapping.csv",
+      "sha256": "166c11c2590b798070e1d7e809846c987a0120d97379dd68aa119510c2b37b2f"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/marker_databases/database_gene_functions/Cell_marker_All.csv",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/marker_databases/database_gene_functions/Cell_marker_All.csv",
+      "sha256": "8529a51dc16dc971c73d1e932e64e7e23484222166b9c5cc836b3ce7af9d38fc"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/marker_databases/marker_gene_list.tsv",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/marker_databases/marker_gene_list.tsv",
+      "sha256": "a8246bd9036dd0aa169b0d0ab45b0b9129890232f0e50055c38abee6c735e0b9"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/marker_databases/neoplastic_genes.csv",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/resources/marker_databases/neoplastic_genes.csv",
+      "sha256": "9a9baa06be791b4aa8f1f378325b7280362af473ae219119a8c699cdf6a410c8"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/run_ci_seed_classifier.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/run_ci_seed_classifier.py",
+      "sha256": "4f9ac65072c5d10ea17c2b4693afd93e29cd4ca4e8d120151210d1d2bd0b3e71",
+      "packaged_sha256": "fefb4b1b63fd7cc0cc30606c044fd8f3152baa0613f883f861e3d7ed64366358"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/vendor/cdge/preprocessing_hest/preproce_utils/bottom_up_utils.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/vendor/cdge/preprocessing_hest/preproce_utils/bottom_up_utils.py",
+      "sha256": "c84a9aa640695d5202f6b1d475a78c17e4e928ac22a31b829ec6ac756337c9d1"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/vendor/emanuele/README.md",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/vendor/emanuele/README.md",
+      "sha256": "2dd2a815df0e77fde248db441a8b26081409af52f190552d50c510a4ef4f2da9"
+    },
+    {
+      "packaged": "base/methods/b2_16_ci_cnv_four_class_candidate_20261011/vendor/emanuele/mapping_original.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_16_ci_cnv_four_class_candidate_20261011/vendor/emanuele/mapping_original.py",
+      "sha256": "ac1057dab1dd6d4fc27232302f57d4833b44699daa46d1d6a1df96dfaa1d834f"
+    },
+    {
+      "packaged": "base/methods/b2_7_qc_multicluster_normal_candidate_20261010/normal_reference.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/methods/b2_7_qc_multicluster_normal_candidate_20261010/normal_reference.py",
+      "sha256": "8069e64099b5449ca49eb44db9f7f1dbf39df399a91c65b7c4aa24d297a9a79f"
+    },
+    {
+      "packaged": "base/run_stage.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/run_stage.py",
+      "sha256": "4c04bcdcfca0ac58230641e8f90866748f2fb43b9eeb411b9fed572a15ffbb79"
+    },
+    {
+      "packaged": "base/tools/preflight.py",
+      "source": "CURRENT_METHOD_B2_16_20261012/tools/preflight.py",
+      "sha256": "5e624b9b8bff19214d9b91843380d28004e3ac0b0f34559a46f83093752f089f",
+      "packaged_sha256": "4c3f8aebc624da322ef74926c1a1edfa64d640d24ca9c619dca5fc0f97608a43",
+      "handoff_change": "Added an early input-contract check for layers[counts] in existing preparation mode."
+    },
+    {
+      "packaged": "experimental_cell_gate/binary_spa_e_gate.py",
+      "source": "HANDOFF_METHOD_20261020/experimental_cell_gate/binary_spa_e_gate.py",
+      "sha256": "dbf31188951c9a50155f91f642d89b2bb37704ce080ef826f84aac91d2e7a9df"
+    },
+    {
+      "packaged": "experimental_cell_gate/run_all_binary_spa.py",
+      "source": "HANDOFF_METHOD_20261020/experimental_cell_gate/run_all_binary_spa.py",
+      "sha256": "00fee4789789e8e5cb742593ee14f775f891d60a6f543c6537121744c01b3314",
+      "packaged_sha256": "63d0b0bb2e243ede44a4e85058738c52d5728843a9c81af0f956593970c6b0de",
+      "handoff_change": "Updated the gate method-directory argument to the bundled B2.16 path."
+    },
+    {
+      "packaged": "experimental_cell_gate/BINARY_SPA_E_GATE.md",
+      "source": "HANDOFF_METHOD_20261020/experimental_cell_gate/BINARY_SPA_E_GATE.md",
+      "sha256": "2d52fad2a3e0b2a47cba5beebf3bd0081dd6cf54fd8bb1361878eedb624fa584",
+      "packaged_sha256": "aef223444db138a8f8028880cd1a816331f0f1d6da3f3950e3b50c25ea26d846",
+      "handoff_change": "Replaced stale server-specific commands with package-relative commands."
+    },
+    {
+      "packaged": "experimental_cell_gate/run_selection.py",
+      "source": "reviews/prior_seed_baselines_20261019/run_selection.py",
+      "sha256": "ff51d9bb0a29d73cfc9760962225e93b9e0a0dd432d44b46fa5b2387cbf36391"
+    }
+  ]
+}

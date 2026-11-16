@@ -1,0 +1,55 @@
+term,core_class,database_override,rationale
+B cells,Inflammatory,1,canonical immune lineage
+B cells memory,Inflammatory,1,canonical immune lineage
+B cells naive,Inflammatory,1,canonical immune lineage
+B cell,Inflammatory,1,canonical immune lineage
+Gamma delta T cells,Inflammatory,1,canonical immune lineage
+Gamma delta T cell,Inflammatory,1,canonical immune lineage
+Memory T cell,Inflammatory,1,canonical immune lineage
+Memory T-cell,Inflammatory,1,canonical immune lineage
+Natural killer T cells,Inflammatory,1,canonical immune lineage
+Natural killer CD56 bright cell,Inflammatory,1,canonical immune lineage
+Pan-T cell,Inflammatory,1,canonical immune lineage
+Pan‐T cell,Inflammatory,1,canonical immune lineage
+Pan–T-cell,Inflammatory,1,canonical immune lineage
+T cells,Inflammatory,1,canonical immune lineage
+T cells naive,Inflammatory,1,canonical immune lineage
+T cell,Inflammatory,1,canonical immune lineage
+γ δ T cell,Inflammatory,1,canonical immune lineage
+Macrophages,Inflammatory,1,canonical immune lineage
+Mast Cells,Inflammatory,1,canonical immune lineage
+CXCL9/10 Cells,Inflammatory,1,canonical immune lineage
+Alpha cells,Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Alpha cell (α cell),Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Beta cells,Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Beta cell(β cell),Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Endocrine cell,Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Endocrine progenitor cell,Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Enteroendocrine cells,Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Enteroendocrine cell,Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Gastric neuroendocrine cell,Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Immature endocrine cell,Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Neuroendocrine cells,Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Neuroendocrine cell,Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Non-β endocrine cell,Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Pancreatic cell,Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Pancreatic endoderm cell,Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Pancreatic polypeptide cell,Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Pancreatic progenitor cells,Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Pancreatic progenitor cell,Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Pancreatic stem cell,Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+PDX1+ pancreatic progenitor cell,Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Stem-cell-derived-alpha cell,Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Stem-cell-derived-beta cell,Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Undifferentiated pancreatic progenitor cell,Epithelial,1,non-neoplastic epithelial-parenchymal compartment
+Acinar,Epithelial,0,external-reference adapter
+Ductal,Epithelial,0,external-reference adapter
+Endocrine 1,Epithelial,0,external-reference adapter
+Endocrine 2,Epithelial,0,external-reference adapter
+Fibroblasts,Connective_tissue,0,external-reference adapter
+Endothelial,Connective_tissue,0,external-reference adapter
+Lymphatic Endothelial Cells,Connective_tissue,0,external-reference adapter
+Smooth Muscle Cells,Connective_tissue,0,external-reference adapter
+Tumor Cells,Neoplastic,0,external-reference adapter
+CFTR- Tumor Cells,Neoplastic,0,external-reference adapter
+Metaplastic Cells,Neoplastic,0,external-reference adapter

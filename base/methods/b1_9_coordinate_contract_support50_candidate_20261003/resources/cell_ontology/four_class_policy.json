@@ -1,0 +1,29 @@
+{
+  "version": "fixed_CL_ancestor_policy_v1",
+  "class_priority": ["Neoplastic", "Inflammatory", "Epithelial", "Connective_tissue"],
+  "class_anchors": {
+    "Neoplastic": ["CL:0001063"],
+    "Inflammatory": ["CL:0000738"],
+    "Epithelial": ["CL:0000066", "CL:0000036", "CL:0009116", "CL:0002351"],
+    "Connective_tissue": ["CL:0002320", "CL:0000115", "CL:0000187"]
+  },
+  "anchor_rationale": {
+    "CL:0000036": "Epithelial-fate stem cells retain epithelial lineage.",
+    "CL:0009116": "Mammary luminal epithelial progenitors retain epithelial lineage despite a precursor-only is_a chain.",
+    "CL:0002351": "Endocrine pancreas progenitors belong to the project's pancreatic epithelial lineage class.",
+    "CL:0000115": "Project Connective/Soft-tissue class includes vascular endothelial cells.",
+    "CL:0000187": "Project Connective/Soft-tissue class includes muscle cells."
+  },
+  "organ_refinements": [
+    {"organ": "Pancreas", "from_id": "CL:0000163", "to_id": "CL:0008024", "reason": "Known pancreas metadata qualifies generic endocrine records as pancreatic endocrine cells; the target is a verified CL subtype."}
+  ],
+  "name_aliases": [
+    {"name": "ductal cell", "organ": "*", "cl_id": "CL:0000068"},
+    {"name": "ductal epithelial cell", "organ": "*", "cl_id": "CL:0000068"},
+    {"name": "epithelial ductal cell", "organ": "*", "cl_id": "CL:0000068"},
+    {"name": "luminal epithelial cell", "organ": "Breast", "cl_id": "CL:0002326"}
+  ],
+  "unresolved": "excluded; no default Connective fallback; ambiguous synonyms excluded",
+  "scope": "One versioned biological policy across organs, not fitted to cell annotations. Previously evaluated slides are development datasets.",
+  "source": "Packaged checksummed CL IDs and all is_a ancestors; project lineage grouping and metadata refinements are explicit, not claimed as pure ontology inference."
+}

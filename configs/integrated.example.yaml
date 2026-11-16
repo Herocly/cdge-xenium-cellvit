@@ -1,0 +1,42 @@
+# Copy this file and replace paths/sample IDs. Paths are relative to THIS file.
+experiment_id: hest_comparison_ours
+output_root: ../runs_integrated
+hest_dir: /path/to/hest_data
+cdge_root: ../vendor/CDGE
+image_python: ../envs/image/.venv/bin/python
+analysis_python: ../envs/analysis/.venv/bin/python
+cnv_python: ../envs/cnv/.venv/bin/python
+cellvit_python: ../envs/cellvit/.venv/bin/python
+patch_size: 256
+min_csv_match_fraction: 0.9
+samples:
+  - sample_id: TENX_SAMPLE_A
+    split: train
+    cohort: cohort_A
+    organ: Breast
+    # Default molecular input: <hest_dir>/proc_adata/<sample_id>.h5ad
+    # Or input_adata: /path/to/label_free_cell_level.h5ad
+    # labels_csv: /path/to/existing_labels.csv  # omit to run molecular method
+    # For a nonstandard HEST layout, override any of these independently:
+    # nucleus_segmentation: /data/alternate/nuclei.parquet
+    # patch_coordinates: /data/alternate/patches.h5
+    # wsi: /data/alternate/registered_he.tif
+    # metadata: /data/alternate/sample.json
+  - sample_id: TENX_SAMPLE_B
+    split: val
+    cohort: cohort_B
+    organ: Breast
+cellvit:
+  # pretrained_checkpoint: /path/to/compatible_cellvit_checkpoint.pth
+  # The original teacher config used 130 epochs and batch 16. Adjust batch
+  # only after documenting GPU-memory limits; keep both comparison arms equal.
+  epochs: 130
+  batch_size: 16
+  learning_rate: 0.0003
+  random_seed: 19
+  scheduler_gamma: 0.85
+  unfreeze_epoch: 25
+  early_stopping_patience: 20
+  device: cuda
+  # Required only for --stage evaluate or --stage all:
+  # external_test_dataset: /path/to/prepared_pannuke

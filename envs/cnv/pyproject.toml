@@ -1,0 +1,22 @@
+[project]
+name = "cdge-cnv-environment"
+version = "0.1.0"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "anndata==0.11.4",
+  "scanpy==1.11.5",
+  "pandas==2.3.3",
+  "numpy==2.4.6",
+  "scipy==1.17.1",
+  "infercnvpy==0.6.1",
+  "scikit-learn==1.9.1",
+  "leidenalg==0.12.0",
+  "igraph==1.0.0",
+  "pronto==2.7.3",
+  "fastobo==0.14.1",
+  "matplotlib",
+  "scvelo",
+  "umap-learn==0.5.12",
+  "pynndescent==0.6.0",
+  "insitucnv @ git+https://github.com/Moldia/InSituCNV.git@0f6176e9334bfe5309b6591e972b90353946e3f1",
+]

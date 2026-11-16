@@ -1,0 +1,18 @@
+[project]
+name = "cdge-cellvit-label-bridge"
+version = "0.1.0"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+  "numpy==1.26.4",
+  "pandas==2.2.2",
+  "h5py==3.16.0",
+  "anndata==0.11.4",
+  "pyarrow==20.0.0",
+  "shapely==2.1.2",
+  "geopandas==1.1.4",
+  "rasterio==1.4.4",
+  "openslide-python==1.4.6",
+  "openslide-bin>=4,<5",
+  "pillow==12.3.0",
+  "tqdm==4.66.5",
+]

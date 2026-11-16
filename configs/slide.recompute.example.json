@@ -1,0 +1,10 @@
+{
+  "dataset_id": "sample_identifier",
+  "organ": "Breast",
+  "input_adata": "${CDGE_INPUT_ADATA}",
+  "output_dir": "${CDGE_OUTPUT_DIR}",
+  "analysis_python": "${CDGE_ANALYSIS_PYTHON}",
+  "cnv_python": "${CDGE_CNV_PYTHON}",
+  "preparation_mode": "recompute",
+  "counts_layer": "counts"
+}

@@ -1,0 +1,362 @@
+[
+  {
+    "name": "01_preparation",
+    "command": [
+      "/env/analysis/bin/python",
+      "<BUNDLE>/run_stage.py",
+      "prepare",
+      "--",
+      "--input",
+      "/input/slide.h5ad",
+      "--out",
+      "/output/run/01_preparation/label_free_analysis.h5ad",
+      "--expression-layer",
+      "counts"
+    ],
+    "outputs": [
+      "/output/run/01_preparation/label_free_analysis.h5ad"
+    ]
+  },
+  {
+    "name": "02_cluster_evidence",
+    "command": [
+      "/env/analysis/bin/python",
+      "<BUNDLE>/run_stage.py",
+      "cluster-evidence",
+      "--",
+      "--adata",
+      "/output/run/01_preparation/label_free_analysis.h5ad",
+      "--tissue",
+      "Breast",
+      "--out-dir",
+      "/output/run/02_cluster_evidence"
+    ],
+    "outputs": [
+      "/output/run/02_cluster_evidence/cluster_reliability_no_official_labels.csv"
+    ]
+  },
+  {
+    "name": "03_bootstrap_normal_seeds",
+    "command": [
+      "/env/analysis/bin/python",
+      "<BUNDLE>/run_stage.py",
+      "normal-seeds",
+      "--",
+      "--adata",
+      "/output/run/01_preparation/label_free_analysis.h5ad",
+      "--cluster-evidence",
+      "/output/run/02_cluster_evidence/cluster_reliability_no_official_labels.csv",
+      "--seed-policy",
+      "single",
+      "--out-dir",
+      "/output/run/03_bootstrap_normal_seeds"
+    ],
+    "outputs": [
+      "/output/run/03_bootstrap_normal_seeds/tiered_initial_seeds_no_official_labels.csv"
+    ]
+  },
+  {
+    "name": "04_bootstrap_cnv",
+    "command": [
+      "/env/cnv/bin/python",
+      "<BUNDLE>/run_stage.py",
+      "bootstrap-cnv",
+      "--",
+      "--adata",
+      "/output/run/01_preparation/label_free_analysis.h5ad",
+      "--non-tumor-seeds",
+      "/output/run/03_bootstrap_normal_seeds/tiered_initial_seeds_no_official_labels.csv",
+      "--out-dir",
+      "/output/run/04_bootstrap_cnv"
+    ],
+    "outputs": [
+      "/output/run/04_bootstrap_cnv/adata_cnv.h5ad"
+    ]
+  },
+  {
+    "name": "05_bootstrap_audit",
+    "command": [
+      "/env/cnv/bin/python",
+      "<BUNDLE>/run_stage.py",
+      "bootstrap-audit",
+      "--",
+      "--cnv-adata",
+      "/output/run/04_bootstrap_cnv/adata_cnv.h5ad",
+      "--out-dir",
+      "/output/run/05_bootstrap_audit"
+    ],
+    "outputs": [
+      "/output/run/05_bootstrap_audit/cnv_candidate_audit_label_free.csv"
+    ]
+  },
+  {
+    "name": "06_bootstrap_evidence",
+    "command": [
+      "/env/cnv/bin/python",
+      "<BUNDLE>/run_stage.py",
+      "bootstrap-evidence",
+      "--",
+      "--cnv-adata",
+      "/output/run/04_bootstrap_cnv/adata_cnv.h5ad",
+      "--expression-adata",
+      "/output/run/01_preparation/label_free_analysis.h5ad",
+      "--cluster-table",
+      "/output/run/02_cluster_evidence/cluster_reliability_no_official_labels.csv",
+      "--cnv-audit",
+      "/output/run/05_bootstrap_audit/cnv_candidate_audit_label_free.csv",
+      "--out-dir",
+      "/output/run/06_bootstrap_evidence"
+    ],
+    "outputs": [
+      "/output/run/06_bootstrap_evidence/neoplastic_evidence_table_no_official_labels.csv"
+    ]
+  },
+  {
+    "name": "07_bootstrap_neoplastic_seeds",
+    "command": [
+      "/env/cnv/bin/python",
+      "<BUNDLE>/run_stage.py",
+      "bootstrap-seeds",
+      "--",
+      "--evidence-table",
+      "/output/run/06_bootstrap_evidence/neoplastic_evidence_table_no_official_labels.csv",
+      "--out-dir",
+      "/output/run/07_bootstrap_neoplastic_seeds"
+    ],
+    "outputs": [
+      "/output/run/07_bootstrap_neoplastic_seeds/neoplastic_seed_candidates.csv"
+    ]
+  },
+  {
+    "name": "08_multicluster_seeds",
+    "command": [
+      "/env/analysis/bin/python",
+      "<BUNDLE>/run_stage.py",
+      "normal-seeds",
+      "--",
+      "--adata",
+      "/output/run/01_preparation/label_free_analysis.h5ad",
+      "--cluster-evidence",
+      "/output/run/02_cluster_evidence/cluster_reliability_no_official_labels.csv",
+      "--out-dir",
+      "/output/run/08_multicluster_seeds"
+    ],
+    "outputs": [
+      "/output/run/08_multicluster_seeds/tiered_initial_seeds_no_official_labels.csv"
+    ]
+  },
+  {
+    "name": "09_seed_qc",
+    "command": [
+      "/env/analysis/bin/python",
+      "<BUNDLE>/run_stage.py",
+      "seed-qc",
+      "--",
+      "--adata",
+      "/output/run/01_preparation/label_free_analysis.h5ad",
+      "--tiered-seeds",
+      "/output/run/08_multicluster_seeds/tiered_initial_seeds_no_official_labels.csv",
+      "--out-dir",
+      "/output/run/09_seed_qc"
+    ],
+    "outputs": [
+      "/output/run/09_seed_qc/qc_screened_tiered_seeds_no_official_labels.csv"
+    ]
+  },
+  {
+    "name": "10_original_seed_source",
+    "command": [
+      "/env/cnv/bin/python",
+      "<BUNDLE>/run_stage.py",
+      "historical-seed-merge",
+      "--",
+      "--adata",
+      "/output/run/01_preparation/label_free_analysis.h5ad",
+      "--tiered-seeds",
+      "/output/run/09_seed_qc/qc_screened_tiered_seeds_no_official_labels.csv",
+      "--neoplastic-seeds",
+      "/output/run/07_bootstrap_neoplastic_seeds/neoplastic_seed_candidates.csv",
+      "--neoplastic-evidence",
+      "/output/run/06_bootstrap_evidence/neoplastic_evidence_table_no_official_labels.csv",
+      "--out-dir",
+      "/output/run/10_original_seed_source"
+    ],
+    "outputs": [
+      "/output/run/10_original_seed_source/combined_initial_seeds_no_official_labels.csv"
+    ]
+  },
+  {
+    "name": "11_normal_expansion",
+    "command": [
+      "/env/analysis/bin/python",
+      "<BUNDLE>/run_stage.py",
+      "normal-expand",
+      "--",
+      "--adata",
+      "/output/run/01_preparation/label_free_analysis.h5ad",
+      "--seed-file",
+      "/output/run/10_original_seed_source/combined_initial_seeds_no_official_labels.csv",
+      "--cluster-evidence",
+      "/output/run/02_cluster_evidence/cluster_reliability_no_official_labels.csv",
+      "--out-dir",
+      "/output/run/11_normal_expansion"
+    ],
+    "outputs": [
+      "/output/run/11_normal_expansion/normal_reference_no_official_labels.csv",
+      "/output/run/11_normal_expansion/generation_manifest_no_official_labels.json"
+    ]
+  },
+  {
+    "name": "12_strict_ci_cnv",
+    "command": [
+      "/env/cnv/bin/python",
+      "<BUNDLE>/run_stage.py",
+      "cnv",
+      "--",
+      "--adata",
+      "/output/run/01_preparation/label_free_analysis.h5ad",
+      "--non-tumor-seeds",
+      "/output/run/11_normal_expansion/normal_reference_no_official_labels.csv",
+      "--out-dir",
+      "/output/run/12_strict_ci_cnv"
+    ],
+    "outputs": [
+      "/output/run/12_strict_ci_cnv/adata_cnv.h5ad"
+    ]
+  },
+  {
+    "name": "13_cnv_audit",
+    "command": [
+      "/env/cnv/bin/python",
+      "<BUNDLE>/run_stage.py",
+      "cnv-audit",
+      "--",
+      "--cnv-adata",
+      "/output/run/12_strict_ci_cnv/adata_cnv.h5ad",
+      "--out-dir",
+      "/output/run/13_cnv_audit"
+    ],
+    "outputs": [
+      "/output/run/13_cnv_audit/cnv_candidate_audit_label_free.csv"
+    ]
+  },
+  {
+    "name": "14_neoplastic_evidence",
+    "command": [
+      "/env/cnv/bin/python",
+      "<BUNDLE>/run_stage.py",
+      "neoplastic-evidence",
+      "--",
+      "--cnv-adata",
+      "/output/run/12_strict_ci_cnv/adata_cnv.h5ad",
+      "--expression-adata",
+      "/output/run/01_preparation/label_free_analysis.h5ad",
+      "--cluster-table",
+      "/output/run/02_cluster_evidence/cluster_reliability_no_official_labels.csv",
+      "--cnv-audit",
+      "/output/run/13_cnv_audit/cnv_candidate_audit_label_free.csv",
+      "--out-dir",
+      "/output/run/14_neoplastic_evidence"
+    ],
+    "outputs": [
+      "/output/run/14_neoplastic_evidence/neoplastic_evidence_table_no_official_labels.csv"
+    ]
+  },
+  {
+    "name": "15_new_neoplastic_seeds",
+    "command": [
+      "/env/cnv/bin/python",
+      "<BUNDLE>/run_stage.py",
+      "neoplastic-seeds",
+      "--",
+      "--evidence-table",
+      "/output/run/14_neoplastic_evidence/neoplastic_evidence_table_no_official_labels.csv",
+      "--out-dir",
+      "/output/run/15_new_neoplastic_seeds"
+    ],
+    "outputs": [
+      "/output/run/15_new_neoplastic_seeds/neoplastic_seed_candidates.csv"
+    ]
+  },
+  {
+    "name": "16_four_class_seeds",
+    "command": [
+      "/env/cnv/bin/python",
+      "<BUNDLE>/run_stage.py",
+      "combine",
+      "--",
+      "--adata",
+      "/output/run/01_preparation/label_free_analysis.h5ad",
+      "--normal-seeds",
+      "/output/run/10_original_seed_source/combined_initial_seeds_no_official_labels.csv",
+      "--neoplastic-seeds",
+      "/output/run/15_new_neoplastic_seeds/neoplastic_seed_candidates.csv",
+      "--out-dir",
+      "/output/run/16_four_class_seeds"
+    ],
+    "outputs": [
+      "/output/run/16_four_class_seeds/combined_initial_seeds_no_official_labels.csv"
+    ]
+  },
+  {
+    "name": "17_four_class_iteration",
+    "command": [
+      "/env/cnv/bin/python",
+      "<BUNDLE>/run_stage.py",
+      "expand",
+      "--",
+      "--adata",
+      "/output/run/01_preparation/label_free_analysis.h5ad",
+      "--seed-file",
+      "/output/run/16_four_class_seeds/combined_initial_seeds_no_official_labels.csv",
+      "--cluster-evidence",
+      "/output/run/02_cluster_evidence/cluster_reliability_no_official_labels.csv",
+      "--neoplastic-evidence",
+      "/output/run/14_neoplastic_evidence/neoplastic_evidence_table_no_official_labels.csv",
+      "--out-dir",
+      "/output/run/17_four_class_iteration"
+    ],
+    "outputs": [
+      "/output/run/17_four_class_iteration/iterative_all_cell_predictions_no_official_labels.csv",
+      "/output/run/17_four_class_iteration/final_pseudolabels_no_official_labels.csv"
+    ]
+  },
+  {
+    "name": "18_full_input_predictions",
+    "command": [
+      "/env/cnv/bin/python",
+      "<BUNDLE>/run_stage.py",
+      "export-full-axis",
+      "--",
+      "--input-adata",
+      "/input/slide.h5ad",
+      "--predictions",
+      "/output/run/17_four_class_iteration/iterative_all_cell_predictions_no_official_labels.csv",
+      "--out-dir",
+      "/output/run/18_full_input_predictions"
+    ],
+    "outputs": [
+      "/output/run/18_full_input_predictions/all_input_predictions_no_official_labels.csv"
+    ]
+  },
+  {
+    "name": "19_evaluation_only",
+    "command": [
+      "/env/cnv/bin/python",
+      "<BUNDLE>/run_stage.py",
+      "evaluate",
+      "--",
+      "--predictions",
+      "/output/run/18_full_input_predictions/all_input_predictions_no_official_labels.csv",
+      "--reference",
+      "/input/reference.csv",
+      "--method-name",
+      "B2.16-complete",
+      "--out-dir",
+      "/output/run/19_evaluation_only"
+    ],
+    "outputs": [
+      "/output/run/19_evaluation_only/evaluation_summary_only.json"
+    ]
+  }
+]
