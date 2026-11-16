@@ -18,7 +18,7 @@ outside the repository. If your server requires a particular official PyTorch
 CUDA wheel, set `CDGE_TORCH_INDEX_URL` before installation.
 
 ```bash
-git clone <repository-URL> cdge-xenium-cellvit
+git clone https://github.com/Herocly/cdge-xenium-cellvit.git cdge-xenium-cellvit
 cd cdge-xenium-cellvit
 bash scripts/install.sh
 bash scripts/check_install.sh
