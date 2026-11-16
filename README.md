@@ -4,11 +4,7 @@ This project turns HEST Xenium measurements into cell-type training labels,
 matches those labels to nuclei in registered H&E images, and prepares patches
 for CellViT training and evaluation.
 
-The molecular method checks cluster evidence, selects C/I/E seeds, applies a
-Binary-SPA-style marker check to Epithelial seeds, expands normal-cell labels,
-and uses CNV and expression evidence to generate Neoplastic seeds. A four-class
-classifier then expands labels for up to 20 rounds. Cells without enough
-support remain `Unknown`.
+
 
 ## Start here
 
