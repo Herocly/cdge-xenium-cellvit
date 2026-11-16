@@ -98,22 +98,7 @@ Validation. Add the agreed split and model settings before running `assemble`,
 PanNuke-format test set.
 
 Changing the YAML, including its `split` values, creates a new run directory.
-To reuse molecular labels you already generated, set `labels_csv` for each
-sample to its completed CSV. Keep the CSV available at that path.
 
-### Watching a long molecular run
-
-Run `molecular` in `tmux` if you may disconnect. The useful files are:
-
-```text
-<run>/molecular/<ID>/run/status.json     current internal step
-<run>/molecular/<ID>/run/plan.json       exact command, input, and output of each step
-<run>/molecular/<ID>/run/<step>.log      detailed output from that step
-```
-
-A large slide may take hours, and the top-level terminal can stay quiet while
-a calculation writes to its own log. If a step fails, keep the same YAML and
-rerun `molecular` to resume completed internal steps.
 
 ## HEST inputs and label files
 
@@ -171,20 +156,7 @@ Segmentation and detection need separate evaluations. HEST nucleus polygons
 come from segmentation and have not been independently verified as manual
 ground truth.
 
-## Verification status
 
-As of 16 November 2026, source integrity, unit tests, one real HEST patch
-conversion, CSV-to-nucleus matching, and a CellViT forward/backward/checkpoint
-smoke test had passed. The complete HEST molecular-to-CellViT comparison
-remains to be run. The smoke test checks software compatibility; it is not
-an image-performance result. See the [validation record](docs/REPOSITORY_VALIDATION_20261116.md)
-and [handoff checks](docs/INTEGRATED_VERIFICATION_20261116.md).
-
-At that check, the server had one HEST sample, TENX142. A formal
-Train/Validation comparison needs another independent cohort, matched
-Bottom-up and proposed labels, an agreed training setup, and an external
-test set. The available TENX142 Bottom-up artifact has zero Neoplastic
-labels, so check class coverage when choosing samples.
 
 ## Repository map
 
@@ -198,12 +170,4 @@ labels, so check class coverage when choosing samples.
 | `docs/` | Detailed data contracts, outputs, verification records |
 | `vendor/CDGE/` | CellViT and HEST processing code copied from the teacher project |
 
-If a run stops, check `status.json` and the corresponding step log. Common
-causes are mismatched sample and segmentation files, missing inputs,
-overlapping cohorts, a missing cell class, or CUDA configuration.
 
-For full file contracts and extra commands, see the
-[pipeline guide](docs/INTEGRATED_CELLVIT_PIPELINE.md). Before public release,
-review [third-party materials](THIRD_PARTY.md) and
-[release blockers](RELEASE_BLOCKERS.md). Keep raw data, patient information,
-weights, checkpoints, and generated runs outside Git.
