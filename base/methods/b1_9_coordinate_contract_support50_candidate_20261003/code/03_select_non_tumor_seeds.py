@@ -19,8 +19,8 @@ non-ambiguous evidence.  No truth labels are loaded.
         结构分 ≥ 2/3 且 投票分 ≥ 2/3 且 vote_margin > 0 且
         独立数据库支持 source_support_count > 0
     Tier B（兜底规则，只在某类【一个 Tier A 都没有】时启用）：
-        结构分 ≥ 0.50 且 投票分 ≥ 0.50 且 marker_coverage ≥ 0.40
-        且 vote_margin ≥ 0.25 且 source_support_count > 0
+        结构分 ≥ 0.50 且 投票分 ≥ 0.50 且 vote_margin ≥ 0.25
+        且 source_support_count > 0
 
     每类按 reliability_score 降序取最可靠的 1 个 cluster（--seed-policy
     single；multi 则多个），取该 cluster 内到 PCA 中心最近的 30%
@@ -99,7 +99,6 @@ def main() -> None:
     table["tier_b"] = (
         (table["structural_reliability_score"] >= .50)
         & (table["annotation_confidence_score"] >= .50)
-        & (table["marker_coverage"] >= .40)
         & (table["vote_margin"] >= .25)
         & (table["source_support_count"] > 0)
     )
@@ -150,7 +149,7 @@ def main() -> None:
         "official_labels_policy": "not_loaded", "core_fraction": args.core_fraction,
         "seed_policy": args.seed_policy,
         "tier_a": "structural>=0.667, annotation>=0.667, margin>0, source_support>0",
-        "tier_b": "only for a missing class: structural>=0.50, annotation>=0.50, coverage>=0.40, margin>=0.25, source_support>0",
+        "tier_b": "only for a missing class: structural>=0.50, annotation>=0.50, margin>=0.25, source_support>0",
         "selected_classes": [row["label"] for row in selected],
         "unlabeled_missing_classes": sorted(set(CORE_CLASSES) - {row["label"] for row in selected}),
     }

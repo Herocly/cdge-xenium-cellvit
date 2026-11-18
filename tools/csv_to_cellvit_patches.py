@@ -46,6 +46,26 @@ def make_run_id(labels_csv: Path, digest: str, run_name: str | None, patch_index
     return f"{name}-{digest[:12]}-{scope}"
 
 
+
+def park_unlabeled_images(sample_out: Path) -> int:
+    """Keep no-nucleus H&E crops for audit, outside CellViT's paired images/."""
+    images = {p.stem: p for p in (sample_out / "images").glob("*.png")}
+    labels = {p.stem for p in (sample_out / "labels").glob("*.npy")}
+    if labels - images.keys():
+        raise ValueError("NPY label without its H&E image")
+    extra = {stem: image for stem, image in images.items() if stem not in labels}
+    report = sample_out / "unlabeled_patches.csv"
+    recorded = set(pd.read_csv(report)["img"]) if report.is_file() else set()
+    if {p.name for p in extra.values()} != recorded:
+        raise ValueError("Images without NPY do not match the no-nucleus audit")
+    if extra:
+        destination = sample_out / "unlabeled_images"
+        destination.mkdir(exist_ok=True)
+        for image in extra.values():
+            image.rename(destination / image.name)
+    return len(extra)
+
+
 def read_labels(path: Path, sample_id: str) -> pd.DataFrame:
     labels = pd.read_csv(path, dtype={"sample_id": str, "cell_id": str})
     required = {"sample_id", "cell_id", "predicted_class"}
@@ -191,7 +211,9 @@ def main() -> None:
 
     if file_sha256(args.labels_csv) != labels_sha:
         raise RuntimeError("Input CSV changed while masks were being generated")
+    parked_unlabeled = park_unlabeled_images(sample_out)
     stats.update({
+        "unlabeled_image_files": parked_unlabeled,
         "run_id": run_id,
         "labels_csv": str(args.labels_csv.resolve()),
         "labels_csv_sha256": labels_sha,

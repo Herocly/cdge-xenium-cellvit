@@ -15,14 +15,14 @@ that a separate evaluation script may assess afterwards.
          上的平均表达分（top 10% 分位为阳性）；
       ② CNV 证据：05 输出的 X_cnv 剖面相对正常参考的偏离幅值
          （超过参考细胞 99 分位为"CNV 异常"）+ 06 的 cluster 级
-         剖面一致性/空间一致性；
+         空间一致性；剖面一致性仍记录作审计，不参与筛选；
       ③ 结构证据：细胞所属表达 cluster 的 structural_reliability_score；
       ④ 排除项：03 选出的 Inflammatory/Connective 参考细胞、以及被
          02 强证据标为 C/I 的细胞不允许再当肿瘤。
 
     四个候选变体是【在看任何 ground truth 之前】就固定的递进规则：
       A = 只有基因证据           （并排除强 normal 证据与参考细胞）
-      B = 只有 CNV 证据          （异常 + cluster 剖面一致性 ≥ 0.70）
+      B = 只有 CNV 证据          （幅值异常）
       C = A 且 B                 （两种独立计算相互印证；不假设统计独立）
       D = C 且 空间一致 ≥ 0.50 且 结构分 ≥ 0.50   （最保守，07 用它当种子）
 
@@ -211,8 +211,8 @@ def main() -> None:
     #    A = 基因证据阳性 & 非强 C/I 证据 & 非 CNV 参考细胞
     variant_a = tumor_evidence & ~has_strong_normal_evidence & ~reference
     # B: CNV is a self-contained diagnostic only, not a final label.
-    #    B = CNV 幅值异常 & 所在 CNV cluster 剖面一致(≥0.70)
-    variant_b = cnv_abnormal & (cell_cnv_coherence >= 0.70)
+    #    B = CNV 幅值异常；剖面一致性只作审计，不参与候选筛选。
+    variant_b = cnv_abnormal
     # C: distinct gene and CNV computations agree; statistical independence is not assumed.
     #    C = A 且 B —— 基因与 CNV 两种独立计算相互印证（不假设统计独立）
     variant_c = variant_a & variant_b
@@ -273,7 +273,7 @@ def main() -> None:
                 "tumor_gene_score_cutoff": tumor_cutoff,
                 "cnv_reference_quantile": args.cnv_reference_quantile,
                 "cnv_amplitude_cutoff": cnv_cutoff,
-                "cnv_coherence_minimum": 0.70,
+                "cnv_coherence_minimum": None,
                 "spatial_consistency_minimum": 0.50,
                 "structural_score_minimum": 0.50,
             }
