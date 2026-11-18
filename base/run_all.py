@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the complete two-pass B2.16 method with explicit inputs and checkpoints."""
+"""Run the complete two-pass molecular method with explicit inputs and checkpoints."""
 from __future__ import annotations
 
 import argparse

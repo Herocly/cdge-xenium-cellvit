@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run B2.16 with an E-only Binary-SPA-style gate before normal expansion.
+"""Run the current method with an E-only Binary-SPA-style gate before normal expansion.
 
 The frozen base bundle is never edited. This runner inserts stage 10b and
 changes only the stage-11 and stage-16 seed inputs to its output.
@@ -44,7 +44,7 @@ def build_plan(config: dict) -> list[dict]:
             "--adata", str(output / "01_preparation/label_free_analysis.h5ad"),
             "--seed-file", source,
             "--tissue", config["organ"],
-            "--method-dir", str(BASE / "methods/b2_16_ci_cnv_four_class_candidate_20261011"),
+            "--method-dir", str(BASE / "methods/current"),
             "--out-dir", str(gated_dir),
         ],
         "outputs": [

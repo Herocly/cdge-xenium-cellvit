@@ -1,0 +1,226 @@
+{
+  "purpose": "Trace active files back to historical snapshots; copied algorithms unchanged except import paths in two normal modules",
+  "files": [
+    {
+      "current": "methods/current/code/01_prepare_label_free_analysis.py",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/code/01_prepare_label_free_analysis.py",
+      "original_sha256": "837cddbb789b5c23e1fea1f7ff600e8f2be4d2811ca3f7c9b150c49aff87afe7"
+    },
+    {
+      "current": "methods/current/code/02_build_cluster_evidence.py",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/code/02_build_cluster_evidence.py",
+      "original_sha256": "11a62df4e52d2a36297c32f23eeab10c548e61045830f9f88c5e68b23932c9af"
+    },
+    {
+      "current": "methods/current/code/03_select_non_tumor_seeds.py",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/code/03_select_non_tumor_seeds.py",
+      "original_sha256": "087b8a9ab4953ae2269a05c84628d675483f3f8841e0c7f8f097c5af51d5d695"
+    },
+    {
+      "current": "methods/current/code/05_run_insitucnv.py",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/code/05_run_insitucnv.py",
+      "original_sha256": "97bec25d9818aaabf486272efcbbd39b305413dcaed10821d464a0f46e72949c"
+    },
+    {
+      "current": "methods/current/code/06_audit_cnv_candidates.py",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/code/06_audit_cnv_candidates.py",
+      "original_sha256": "e0f093f71777164fbb30f2ce80379c9f613eb9ea91ffdb569ecab9555b99ac0f"
+    },
+    {
+      "current": "methods/current/code/07_export_neoplastic_seeds.py",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/code/07_export_neoplastic_seeds.py",
+      "original_sha256": "75b2372f52efc0702dfc777edd4d657c95d45acd18cd1b5740e39380f8d7ac23"
+    },
+    {
+      "current": "methods/current/code/09_build_neoplastic_evidence_ablation.py",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/code/09_build_neoplastic_evidence_ablation.py",
+      "original_sha256": "05634e1b3d8c6a386dd1085ec3d1e703a6c1ffa73f889abfba431cf87c4eebdb"
+    },
+    {
+      "current": "methods/current/code/10_combine_initial_seeds.py",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/code/10_combine_initial_seeds.py",
+      "original_sha256": "d0269204d7ee3f4fac52a3cde114fea9467d7856cfb7002ec574dddd6a758636"
+    },
+    {
+      "current": "methods/current/code/05_run_strict_ci_cnv.py",
+      "original": "methods/b2_15_expanded_reference_cnv_candidate_20261011/code/05_run_insitucnv.py",
+      "original_sha256": "8b617ff9441e62b02d35feae52bf54268cd7f92a6c32bf5c80b0cbee98b68580",
+      "removed_optional_legacy_functions": [
+        "evaluate_reference_experiment",
+        "run_reference_experiment"
+      ]
+    },
+    {
+      "current": "methods/current/code/11_export_iterative_pseudolabels.py",
+      "original": "methods/b2_16_ci_cnv_four_class_candidate_20261011/code/11_export_iterative_pseudolabels.py",
+      "original_sha256": "7125f424546f2ca3ad23f9205180d7f96adda3ebaf58841bb532f5bf840b30fc"
+    },
+    {
+      "current": "methods/current/code/reliability/cluster_evidence_gate.py",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/cluster_evidence_gate.py",
+      "original_sha256": "fc907646049e0cf4ce9c12c9bcce51e8e1f92e1b205469f3259fef582dd2a3fb"
+    },
+    {
+      "current": "methods/current/code/reliability/common.py",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/common.py",
+      "original_sha256": "25efd928860e58764139f4d19fe702720a0efc64246aa85b8e9be708f46f37fa"
+    },
+    {
+      "current": "methods/current/code/reliability/data_contracts.py",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/data_contracts.py",
+      "original_sha256": "bf8e3eed9c0bd0bc10885a7fc418114efcaf830addebdc9ba4636152917f2b12"
+    },
+    {
+      "current": "methods/current/code/reliability/expression_space.py",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/expression_space.py",
+      "original_sha256": "ecdd08e3bd4e76ca77cee3fc0409275b02ecd688b19218bd2f37d785c47ee530"
+    },
+    {
+      "current": "methods/current/code/reliability/iterative_expansion.py",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/iterative_expansion.py",
+      "original_sha256": "06a2fdc4167aba1502dc6c07ebf21dc67f66f3528bdc74ff3cd422c7c8efb7e6"
+    },
+    {
+      "current": "methods/current/code/reliability/marker_voting_metrics.py",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/marker_voting_metrics.py",
+      "original_sha256": "50acf94cb75f3e8735914a5639c453e57aea4d5b3c0faeee8ab29ebd2927560e"
+    },
+    {
+      "current": "methods/current/code/reliability/ontology.py",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/ontology.py",
+      "original_sha256": "1ae02d5595517a24cc8a32036821ae21fd5a796da09603ca8911b64b61e81aca"
+    },
+    {
+      "current": "methods/current/code/reliability/ontology_tree.py",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/ontology_tree.py",
+      "original_sha256": "ab23c8023112390eb04e478f33468bfa5427f6b8f497854b9fd4b0b39c40d4eb"
+    },
+    {
+      "current": "methods/current/code/reliability/seed_classifier.py",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/code/reliability/seed_classifier.py",
+      "original_sha256": "512864e93d6b6567aec6bab819667798775b60b190efb5cecc81bd31826d85c6"
+    },
+    {
+      "current": "methods/current/resources/cell_ontology/cl.obo",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/cell_ontology/cl.obo",
+      "original_sha256": "f02b4e2a863758e697c0dc37c4748699b56d3e5a3f9753f188128555499d7121"
+    },
+    {
+      "current": "methods/current/resources/cell_ontology/cl.source.obo",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/cell_ontology/cl.source.obo",
+      "original_sha256": "7e19b4aef8e7fe7720b0c4474c6a5b8713c904ea9ab7b7d5d96f2cb28b8fc51f"
+    },
+    {
+      "current": "methods/current/resources/cell_ontology/four_class_policy.json",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/cell_ontology/four_class_policy.json",
+      "original_sha256": "c3cad6da961d2a73a2869117bfd8063a939fcb81cad2064a81bc9aa283d4e4fd"
+    },
+    {
+      "current": "methods/current/resources/cell_ontology/snapshot.json",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/cell_ontology/snapshot.json",
+      "original_sha256": "59f6729ff8d90f538925b817e22b16bb7f49c6e8cfba0277e896fe1a9e2ae770"
+    },
+    {
+      "current": "methods/current/resources/core_ontology_v1.csv",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/core_ontology_v1.csv",
+      "original_sha256": "f8e398e3774040415b1485b0fd0a21423534668a93a7b7ea1e344684a96130a1"
+    },
+    {
+      "current": "methods/current/resources/ensembl_hg38_coordinates.tsv",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/ensembl_hg38_coordinates.tsv",
+      "original_sha256": "e9965fda09f3c5bfc5274ee720bec46cefc9979e72f9a4b61bf9d2a114dce1a7"
+    },
+    {
+      "current": "methods/current/resources/marker_databases/cell_marker_mapping.csv",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/marker_databases/cell_marker_mapping.csv",
+      "original_sha256": "5c09e257ed97febe7defdf66a50000cb2b374da9c7cde203bd2a211ff81a74e9"
+    },
+    {
+      "current": "methods/current/resources/marker_databases/cell_type_mapping.csv",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/marker_databases/cell_type_mapping.csv",
+      "original_sha256": "166c11c2590b798070e1d7e809846c987a0120d97379dd68aa119510c2b37b2f"
+    },
+    {
+      "current": "methods/current/resources/marker_databases/database_gene_functions/Cell_marker_All.csv",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/marker_databases/database_gene_functions/Cell_marker_All.csv",
+      "original_sha256": "8529a51dc16dc971c73d1e932e64e7e23484222166b9c5cc836b3ce7af9d38fc"
+    },
+    {
+      "current": "methods/current/resources/marker_databases/marker_gene_list.tsv",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/marker_databases/marker_gene_list.tsv",
+      "original_sha256": "a8246bd9036dd0aa169b0d0ab45b0b9129890232f0e50055c38abee6c735e0b9"
+    },
+    {
+      "current": "methods/current/resources/marker_databases/neoplastic_genes.csv",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/resources/marker_databases/neoplastic_genes.csv",
+      "original_sha256": "9a9baa06be791b4aa8f1f378325b7280362af473ae219119a8c699cdf6a410c8"
+    },
+    {
+      "current": "methods/current/vendor/cdge/preprocessing_hest/preproce_utils/bottom_up_utils.py",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/vendor/cdge/preprocessing_hest/preproce_utils/bottom_up_utils.py",
+      "original_sha256": "c84a9aa640695d5202f6b1d475a78c17e4e928ac22a31b829ec6ac756337c9d1"
+    },
+    {
+      "current": "methods/current/vendor/emanuele/README.md",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/vendor/emanuele/README.md",
+      "original_sha256": "2dd2a815df0e77fde248db441a8b26081409af52f190552d50c510a4ef4f2da9"
+    },
+    {
+      "current": "methods/current/vendor/emanuele/mapping_original.py",
+      "original": "methods/b1_9_coordinate_contract_support50_candidate_20261003/vendor/emanuele/mapping_original.py",
+      "original_sha256": "ac1057dab1dd6d4fc27232302f57d4833b44699daa46d1d6a1df96dfaa1d834f"
+    },
+    {
+      "current": "methods/current/normal_seed_qc.py",
+      "original": "methods/b2_7_qc_multicluster_normal_candidate_20261010/normal_reference.py",
+      "original_sha256": "8069e64099b5449ca49eb44db9f7f1dbf39df399a91c65b7c4aa24d297a9a79f",
+      "retained_functions": [
+        "screen_low_information_seed_clusters",
+        "screen_seeds",
+        "sha256"
+      ]
+    },
+    {
+      "current": "methods/current/normal_expansion.py",
+      "original": "methods/b2_14_teacher_constraint_ablation_candidate_20261011/normal_reference.py",
+      "original_sha256": "8e1976c8ff1f06b1c717c3f18eaaa25cfe20a94e7050e1b102bc3a4e5cdfd2a9",
+      "retained_functions": [
+        "admission_routes",
+        "anchored_cluster_mask",
+        "anchored_training_weights",
+        "budget_for_round",
+        "cell_admission_mask",
+        "cluster_support_components",
+        "combined_rank",
+        "confidence_weight",
+        "expand_anchored_reference",
+        "fitted_probabilities",
+        "fixed_seed_radius",
+        "generate",
+        "original_seed_consensus",
+        "prediction_anchor_mask",
+        "probability_decisions",
+        "pseudo_weight_ratio",
+        "reference_neighbor_support",
+        "revoke_provisional_labels",
+        "select_with_spatial_overflow",
+        "sha256",
+        "strict_reference_mask",
+        "validate_and_align_seeds",
+        "validated_reference_graph"
+      ]
+    },
+    {
+      "current": "methods/current/code/seed_merge_metrics.py",
+      "original": "methods/b2_16_ci_cnv_four_class_candidate_20261011/run_ci_seed_classifier.py",
+      "original_sha256": "fefb4b1b63fd7cc0cc30606c044fd8f3152baa0613f883f861e3d7ed64366358",
+      "functions": [
+        "sha",
+        "merge_original_and_cnv",
+        "per_class_metrics"
+      ]
+    }
+  ],
+  "historical_git_commit": "5a01e1f",
+  "note": "Historical source is recoverable with git show 5a01e1f:<original path>. Current method imports only current/code/reliability; no historical method directory is required."
+}

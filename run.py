@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Single entry point for the latest cell-marker pipeline and frozen baseline."""
+"""Single entry point for the current cell-marker method and base variant."""
 from __future__ import annotations
 
 import argparse
@@ -16,11 +16,11 @@ def main() -> None:
     run = sub.add_parser("run", help="Check or execute a configured experiment")
     run.add_argument("--config", type=Path, required=True)
     run.add_argument("--variant", choices=("latest", "frozen", "binary-spa-e"), default="latest",
-                     help="latest: cluster evidence + E cell-marker check; frozen: original B2.16")
+                     help="latest: cluster evidence + E cell-marker check; frozen: base method without E check")
     run.add_argument("--check-only", action="store_true")
     run.add_argument("--resume", action="store_true")
     sub.add_parser("verify", help="Verify packaged source integrity")
-    sub.add_parser("stages", help="List the frozen scientific stages")
+    sub.add_parser("stages", help="List the scientific stages")
     args = parser.parse_args()
     if args.action == "verify":
         target = ROOT / "base/tools/verify_bundle.py"

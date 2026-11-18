@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Convenience entry points for the copied, unmodified research implementations."""
+"""Run the active research stages from one method directory."""
 from __future__ import annotations
 
 import argparse
@@ -11,49 +11,46 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parent
-B19 = ROOT / "methods/b1_9_coordinate_contract_support50_candidate_20261003"
-B27 = ROOT / "methods/b2_7_qc_multicluster_normal_candidate_20261010"
-B214 = ROOT / "methods/b2_14_teacher_constraint_ablation_candidate_20261011"
-B215 = ROOT / "methods/b2_15_expanded_reference_cnv_candidate_20261011"
-B216 = ROOT / "methods/b2_16_ci_cnv_four_class_candidate_20261011"
+CURRENT = ROOT / "methods/current"
 
 STAGES = {
-    "prepare": (B19 / "code/01_prepare_label_free_analysis.py", []),
-    "cluster-evidence": (B19 / "code/02_build_cluster_evidence.py", [
-        "--cdge-root", str(B19 / "vendor/cdge"),
-        "--db-dir", str(B19 / "resources/marker_databases"),
-        "--ontology", str(B19 / "resources/cell_ontology/cl.obo"),
-        "--ontology-policy", str(B19 / "resources/cell_ontology/four_class_policy.json"),
+    "prepare": (CURRENT / "code/01_prepare_label_free_analysis.py", []),
+    "cluster-evidence": (CURRENT / "code/02_build_cluster_evidence.py", [
+        "--cdge-root", str(CURRENT / "vendor/cdge"),
+        "--db-dir", str(CURRENT / "resources/marker_databases"),
+        "--ontology", str(CURRENT / "resources/cell_ontology/cl.obo"),
+        "--ontology-policy", str(CURRENT / "resources/cell_ontology/four_class_policy.json"),
         "--database-policy", "original", "--groupby", "leiden_res_2.00", "--top-n", "20"]),
-    "normal-seeds": (B19 / "code/03_select_non_tumor_seeds.py", [
+    "normal-seeds": (CURRENT / "code/03_select_non_tumor_seeds.py", [
         "--seed-policy", "multi", "--core-fraction", "0.30"]),
-    "bootstrap-cnv": (B19 / "code/05_run_insitucnv.py", [
-        "--coordinates", str(B19 / "resources/ensembl_hg38_coordinates.tsv")]),
-    "bootstrap-audit": (B19 / "code/06_audit_cnv_candidates.py", []),
-    "bootstrap-evidence": (B19 / "code/09_build_neoplastic_evidence_ablation.py", [
-        "--neoplastic-genes", str(B19 / "resources/marker_databases/neoplastic_genes.csv"),
+    "bootstrap-cnv": (CURRENT / "code/05_run_insitucnv.py", [
+        "--coordinates", str(CURRENT / "resources/ensembl_hg38_coordinates.tsv")]),
+    "bootstrap-audit": (CURRENT / "code/06_audit_cnv_candidates.py", []),
+    "bootstrap-evidence": (CURRENT / "code/09_build_neoplastic_evidence_ablation.py", [
+        "--neoplastic-genes", str(CURRENT / "resources/marker_databases/neoplastic_genes.csv"),
         "--gene-evidence-quantile", "0.90", "--cnv-reference-quantile", "0.99"]),
-    "bootstrap-seeds": (B19 / "code/07_export_neoplastic_seeds.py", []),
-    "seed-qc": (B27 / "normal_reference.py", ["screen-seeds"]),
-    "historical-seed-merge": (B19 / "code/10_combine_initial_seeds.py", ["--use-tiered-epithelial"]),
-    "normal-expand": (B214 / "normal_reference.py", [
+    "bootstrap-seeds": (CURRENT / "code/07_export_neoplastic_seeds.py", []),
+    "seed-qc": (CURRENT / "normal_seed_qc.py", ["screen-seeds"]),
+    "historical-seed-merge": (CURRENT / "code/10_combine_initial_seeds.py", ["--use-tiered-epithelial"]),
+    "normal-expand": (CURRENT / "normal_expansion.py", [
         "generate", "--schedule", "progressive", "--budget-mode", "late-growing", "--teacher-mode", "off"]),
-    "cnv": (B215 / "code/05_run_insitucnv.py", [
+    "cnv": (CURRENT / "code/05_run_strict_ci_cnv.py", [
         "--reference-source", "strict", "--reference-classes", "Connective_tissue", "Inflammatory",
-        "--coordinates", str(B215 / "resources/ensembl_hg38_coordinates.tsv")]),
-    "cnv-audit": (B215 / "code/06_audit_cnv_candidates.py", []),
-    "neoplastic-evidence": (B215 / "code/09_build_neoplastic_evidence_ablation.py", [
-        "--neoplastic-genes", str(B215 / "resources/marker_databases/neoplastic_genes.csv"),
+        "--coordinates", str(CURRENT / "resources/ensembl_hg38_coordinates.tsv")]),
+    "cnv-audit": (CURRENT / "code/06_audit_cnv_candidates.py", []),
+    "neoplastic-evidence": (CURRENT / "code/09_build_neoplastic_evidence_ablation.py", [
+        "--neoplastic-genes", str(CURRENT / "resources/marker_databases/neoplastic_genes.csv"),
         "--gene-evidence-quantile", "0.90", "--cnv-reference-quantile", "0.99"]),
-    "neoplastic-seeds": (B215 / "code/07_export_neoplastic_seeds.py", []),
-    "expand": (B216 / "code/11_export_iterative_pseudolabels.py", [
+    "neoplastic-seeds": (CURRENT / "code/07_export_neoplastic_seeds.py", []),
+    "expand": (CURRENT / "code/11_export_iterative_pseudolabels.py", [
         "--max-iterations", "20", "--cluster-release-rounds", "6",
         "--support-min-structural", "0.5", "--support-min-annotation", "0.5"]),
 }
 
 
 def load_four_class_entry():
-    path = B216 / "run_ci_seed_classifier.py"
+    path = CURRENT / "code/seed_merge_metrics.py"
+    sys.path.insert(0, str(CURRENT / "code"))
     spec = importlib.util.spec_from_file_location("bundled_b216_entry", path)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -61,7 +58,7 @@ def load_four_class_entry():
 
 
 def combine(arguments):
-    parser = argparse.ArgumentParser(description="Call the original B2.16 seed merger with explicit paths.")
+    parser = argparse.ArgumentParser(description="Merge four-class seeds with explicit paths.")
     parser.add_argument("--adata", type=Path, required=True)
     parser.add_argument("--normal-seeds", type=Path, required=True)
     parser.add_argument("--neoplastic-seeds", type=Path, required=True)
@@ -90,7 +87,7 @@ def combine(arguments):
     result.to_csv(destination, index=False)
     inputs = {key: {"path": str(path.resolve()), "sha256": method.sha(path)} for key, path in (
         ("adata", args.adata), ("normal_seeds", args.normal_seeds),
-        ("neoplastic_seeds", args.neoplastic_seeds), ("source_code", B216 / "run_ci_seed_classifier.py"))}
+        ("neoplastic_seeds", args.neoplastic_seeds), ("source_code", CURRENT / "code/seed_merge_metrics.py"))}
     audit = {"counts": counts, "conflicting_cells": int(result.seed_conflict.sum()),
              "inputs": inputs, "output_sha256": method.sha(destination),
              "official_labels_policy": "not_loaded",
@@ -190,9 +187,9 @@ def main():
     if args.stage == "list":
         for stage, (script, _) in STAGES.items():
             print(stage + " -> " + str(script.relative_to(ROOT)))
-        print("combine -> original B2.16 merge_original_and_cnv")
+        print("combine -> merge_original_and_cnv")
         print("export-full-axis -> retain QC-rejected original cells as Unknown")
-        print("evaluate -> original B2.16 per_class_metrics + explicit coverage denominators")
+        print("evaluate -> per_class_metrics + explicit coverage denominators")
         return
     interpreter = str(args.python.expanduser().absolute()) if args.python else sys.executable
     if args.stage in STAGES:

@@ -24,7 +24,7 @@ TISSUE = {"rep1": "Breast", "pancreas": "Pancreas"}
 
 
 def load_cluster_module(repo: Path):
-    source = repo / "methods/b2_16_ci_cnv_four_class_candidate_20261011/code/02_build_cluster_evidence.py"
+    source = repo / "methods/current/code/02_build_cluster_evidence.py"
     spec = importlib.util.spec_from_file_location("cluster_evidence_for_baselines", source)
     module = importlib.util.module_from_spec(spec)
     assert spec.loader is not None
@@ -33,7 +33,7 @@ def load_cluster_module(repo: Path):
 
 
 def marker_panel(repo: Path, slide: str, genes: pd.Index, prevalence: np.ndarray, top_n: int):
-    method = repo / "methods/b2_16_ci_cnv_four_class_candidate_20261011"
+    method = repo / "methods/current"
     module = load_cluster_module(repo)
     voting = module.load_original_voting_functions(method / "vendor/cdge")
     db = module.load_databases_compat(

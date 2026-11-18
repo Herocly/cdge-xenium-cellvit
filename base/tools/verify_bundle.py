@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify the frozen source files shipped in this handoff.
+"""Verify the active method source files shipped in this repository.
 
 This check says nothing about scientific correctness or full-run reproduction.
 """
@@ -34,7 +34,7 @@ def source_files() -> list[Path]:
 def build() -> None:
     entries = [{"path": str(path.relative_to(ROOT)), "sha256": sha256(path),
                 "bytes": path.stat().st_size} for path in source_files()]
-    MANIFEST.write_text(json.dumps({"purpose": "Frozen method-source integrity",
+    MANIFEST.write_text(json.dumps({"purpose": "Active method-source integrity",
                                     "files": entries}, indent=2) + "\n")
     print(f"Recorded {len(entries)} source files")
 

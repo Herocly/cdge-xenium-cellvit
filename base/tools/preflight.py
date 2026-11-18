@@ -31,7 +31,7 @@ def main():
         import scanpy as sc
         import numpy as np
         from scipy import sparse
-        code = Path(__file__).resolve().parents[1] / "methods/b1_9_coordinate_contract_support50_candidate_20261003/code"
+        code = Path(__file__).resolve().parents[1] / "methods/current/code"
         sys.path.insert(0, str(code))
         from reliability.data_contracts import validate_counts, usable_panel_coordinates
         from reliability.ontology_tree import CellOntologyMapper

@@ -159,7 +159,7 @@ ground truth.
 | Path | Purpose |
 | --- | --- |
 | `integrated_pipeline/`, `run_pipeline.py` | CLI, stage orchestration, audits, training adapter |
-| `base/`, `experimental_cell_gate/`, `run.py` | Molecular method and resumable runner |
+| `base/methods/current/`, `base/run_stage.py`, `experimental_cell_gate/`, `run.py` | Active molecular method and resumable runner |
 | `tools/` | HEST checks, label export, patch conversion |
 | `envs/`, `scripts/install.sh` | Environment setup |
 | `tests/` | Unit checks and real-data smoke helpers |

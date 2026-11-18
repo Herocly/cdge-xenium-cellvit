@@ -1,6 +1,6 @@
 # Scientific stages and label meanings
 
-This note describes the executable B2.16 lineage, not a new algorithm.
+This note describes the executable method in `base/methods/current/`.
 
 ## Reliable C/I/E starting cells
 
@@ -20,8 +20,9 @@ marker databases and Cell Ontology policy. It separately computes:
 Stage 03/08 selects clusters passing Tier A or fallback Tier B. Tier A requires
 both scores at least 2/3, a positive vote margin and database source support.
 Tier B is used only when a class lacks Tier A clusters; it requires both
-scores at least 0.50, marker coverage at least 0.40, vote margin at least
-0.25 and source support. From each selected cluster, the implementation ranks
+scores at least 0.50, vote margin at least 0.25 and source support.
+Marker coverage contributes to the annotation score but is not an additional
+Tier B cutoff. From each selected cluster, the implementation ranks
 cells by Euclidean distance to its 30-PC centroid and takes the nearest 30%
 before applying the original per-class seed budget. The stage-08 policy may
 use multiple clusters. Stage 09 withholds seed clusters with low total counts
@@ -31,9 +32,8 @@ steps; the cluster label is not assigned to every cluster member.
 The optional `binary-spa-e` stage 10b adds a different kind of cell check:
 for each original E seed, it scores detected marker genes in that **cell**.
 Only cells whose top class is E with positive support and margin at least
-0.15 remain E seeds; rejected E seeds become Unknown. This gate has only
-been implemented for E in the provided candidate runner. It is not a
-normal-versus-tumor proof, and the integrated end-to-end result is unverified.
+0.15 remain E seeds; rejected E seeds become Unknown. The current runner
+applies this cell-level check to E seeds and keeps C and I seeds intact.
 
 ## Neoplastic starting cells
 
@@ -42,6 +42,8 @@ lineage. Stage 11 trains a temporary three-lineage classifier from C/I/E
 seeds and expands normal cells. Its strict C/I subset becomes the CNV normal
 reference in stage 12; E is not a normal CNV reference. Stages 13–15 combine
 CNV and tumor-related expression evidence to obtain new N candidate seeds.
+CNV cluster profile coherence is recorded as evidence, without an additional
+hard candidate cutoff.
 Stage 16 combines the **original** C/I/E seeds with these **new** N seeds,
 withholding contradictory cells. Expanded normal labels do not replace the
 original C/I/E four-class starting set.
@@ -74,10 +76,12 @@ automatically an independent biological ground truth.
 
 ## Exact code pointers
 
-- `base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/02_build_cluster_evidence.py`
-- `base/methods/b1_9_coordinate_contract_support50_candidate_20261003/code/03_select_non_tumor_seeds.py`
-- `base/methods/b2_7_qc_multicluster_normal_candidate_20261010/normal_reference.py`
-- `base/methods/b2_14_teacher_constraint_ablation_candidate_20261011/normal_reference.py`
-- `base/methods/b2_15_expanded_reference_cnv_candidate_20261011/code/05_run_insitucnv.py`
-- `base/methods/b2_16_ci_cnv_four_class_candidate_20261011/code/11_export_iterative_pseudolabels.py`
+- `base/methods/current/code/02_build_cluster_evidence.py`
+- `base/methods/current/code/03_select_non_tumor_seeds.py`
+- `base/methods/current/normal_seed_qc.py`
+- `base/methods/current/normal_expansion.py`
+- `base/methods/current/code/05_run_insitucnv.py` (bootstrap CNV)
+- `base/methods/current/code/05_run_strict_ci_cnv.py` (C/I reference CNV)
+- `base/methods/current/code/11_export_iterative_pseudolabels.py`
+- `base/methods/current/code/seed_merge_metrics.py`
 - `experimental_cell_gate/binary_spa_e_gate.py`
